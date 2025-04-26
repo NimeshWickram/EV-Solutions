@@ -1,7 +1,10 @@
-import { useEffect, useState } from "react"
+/*import { useEffect, useState } from "react"
 import Background from "./Components/Background/Background";
 import Navbar from "./Components/Navbar/Navbar";
 import Hero from "./Components/Hero/Hero";
+import Footer from "./Components/Footer/Footer";
+import Blogs from "./Components/Blogs/Blogs";
+import Contact from "./Contact/Contact";
 
 
 
@@ -30,8 +33,43 @@ const App = () => {
         setHeroCount={setHeroCount}
         playStatus={playStatus}
       />
+      <Blogs />
+      <Contact />
+      <Footer />
+      
+
     </div >
   )
 }
 
-export default App
+export default App */
+
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Navbar from './components/Navbar/Navbar';
+import Blogs from "./Components/Blogs/Blogs";
+import Contact from './pages/Contact/Contact';
+import Contact from "./Contact/Contact";
+
+// Placeholder components (replace with actual pages if they exist)
+const Home = () => <div>Home Page</div>;
+const About = () => <div>About Page</div>;
+
+function App() {
+  return (
+    <Router>
+      <div className="App">
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/explore" element={<Blogs />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/contact" element={<Contact />} />
+        </Routes>
+        <Footer />
+      </div>
+    </Router>
+  );
+}
+
+export default App;
