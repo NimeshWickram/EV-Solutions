@@ -17,3 +17,4 @@ Below are screenshots of the EV-Solutions website:
 
 ![Homepage](C:\Users\tharu\ev-website\screenshots)
 
+![Updated Contact Page](screenshots/contact_page_updated_0428.png)
